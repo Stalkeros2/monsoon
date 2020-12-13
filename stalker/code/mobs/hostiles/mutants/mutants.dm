@@ -2,7 +2,7 @@
 	stat_attack = 2
 	stat_exclusive = 0
 	fearless = 0
-	var/gib_targets = 1 //Гибать
+	var/gib_targets = 1 //ГѓГЁГЎГ ГІГј
 	icon = 'stalker/icons/stalker.dmi'
 	var/deletable = 1 //Self-deletable dead bodies
 	speak_chance = 1.5
@@ -24,7 +24,7 @@
 		if(src.client && (src.client.prefs.chat_toggles & CHAT_LANGUAGE))
 			src << "<span class='warning'>You can't be here!</span>"
 		else
-			src << "<span class='warning'>Вы не можете находитьc&#255; в этой зоне!</span>"
+			src << "<span class='warning'>Г‚Г» Г­ГҐ Г¬Г®Г¦ГҐГІГҐ Г­Г ГµГ®Г¤ГЁГІГјc&#255; Гў ГЅГІГ®Г© Г§Г®Г­ГҐ!</span>"
 		return 0
 	return ..()
 */
@@ -50,13 +50,13 @@
 				H.dropItemToGround(H.back)
 				H.dropItemToGround(H.wear_id)
 			L.gib()
-			visible_message("<span class='danger'>[src] разрывает [L] на кусочки!</span>")
-			to_chat(src, "<span class='userdanger'>Вы пожираете [L] и востанавливаете себе здоровье!</span>")
+			visible_message("<span class='danger'>[src] Г°Г Г§Г°Г»ГўГ ГҐГІ [L] Г­Г  ГЄГіГ±Г®Г·ГЄГЁ!</span>")
+			to_chat(src, "<span class='userdanger'>Г‚Г» ГЇГ®Г¦ГЁГ°Г ГҐГІГҐ [L] ГЁ ГўГ®Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІГҐ Г±ГҐГЎГҐ Г§Г¤Г®Г°Г®ГўГјГҐ!</span>")
 			src.revive()
 
 /mob/living/simple_animal/hostile/mutant/dog
 	name = "dog mutant"
-	desc = "Мутировавша&#255; слепа&#255; дика&#255; собака."
+	desc = "ГЊГіГІГЁГ°Г®ГўГ ГўГёГ &#255; Г±Г«ГҐГЇГ &#255; Г¤ГЁГЄГ &#255; Г±Г®ГЎГ ГЄГ ."
 	eng_desc = "This dog became blind because of the radiation, allowing him to develop a more precise sense of smell. Its skin is of a maroon color, and the lack of food shows the bones of its ribcage.His tail is edible and so taking it would be a good idea to make a soup or sell it."
 	turns_per_move = 15
 	speed = 1
@@ -91,7 +91,7 @@
 	maxbodytemp = 1500
 	environment_smash = 0
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/dog_tail = 1, /obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/dog_tail = 1)
 	//random_butcher_results = 1
 	attack_type = "bite"
 	move_to_delay = 1.2 //Real speed of a mob
@@ -109,7 +109,7 @@
 
 /mob/living/simple_animal/hostile/mutant/snork
 	name = "snork"
-	desc = "Когда-то оно было человеком."
+	desc = "ГЉГ®ГЈГ¤Г -ГІГ® Г®Г­Г® ГЎГ»Г«Г® Г·ГҐГ«Г®ГўГҐГЄГ®Г¬."
 	eng_desc = "The Snork is wearing remains of military clothes and a broken gas mask with a hanging breathing tube.His lips have been shredded, probably by himself, and his skin has a greenish hue. He moves on all fours and his physique allows him to jump up to 10 meters.His nails are sharp and as sharp as claws. The glasses of his gas mask do not allow us to say whether he is blind or not."
 	turns_per_move = 15
 	speed = 3
@@ -141,7 +141,7 @@
 	robust_searching = 1
 	deathmessage = "The snork seizes up and falls limp!"
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/snork_leg = 1, /obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/snork_leg = 1)
 	//random_butcher_results = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	ranged = 1
@@ -200,7 +200,7 @@
 
 /mob/living/simple_animal/hostile/mutant/flesh
 	name = "flesh"
-	desc = "Мутировавша&#255; свинь&#255;."
+	desc = "ГЊГіГІГЁГ°Г®ГўГ ГўГёГ &#255; Г±ГўГЁГ­Гј&#255;."
 	eng_desc = "This abomination is a horribly mutated pig affected by radiation.His three eyes have lost all the vigor of life and his eyes are empty.Despite his large, heavy legs, he seems to be able to move at a decent speed, and is apparently able to catch up with a running human."
 	turns_per_move = 15
 	speed = 5
@@ -231,7 +231,7 @@
 	robust_searching = 1
 	deathmessage = "The flesh makes a death scream!"
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/flesh_eye = 1, /obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/flesh_eye = 1)
 	//random_butcher_results = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	attack_type = "smash"
@@ -242,7 +242,7 @@
 
 /mob/living/simple_animal/hostile/mutant/kaban
 	name = "boar"
-	desc = "Коренное население."
+	desc = "ГЉГ®Г°ГҐГ­Г­Г®ГҐ Г­Г Г±ГҐГ«ГҐГ­ГЁГҐ."
 	eng_desc = "While less touched by mutation physically, as compared to other mutants, the Boars of the Zone remains ugly and loathsome.The smell coming from his mouth smells of carrion and grass.His posture shows that he is able to go at full speed towards an enemy, so staying away would be the best option to kill him. His meat is sold at a good price to Skadovsk merchants."
 	turns_per_move = 15
 	speed = 5
@@ -274,7 +274,7 @@
 	robust_searching = 1
 	deathmessage = "The boar makes a death scream!"
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/boar_leg = 1, /obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/boar_leg = 1)
 	//random_butcher_results = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	attack_type = "smash"
@@ -283,8 +283,8 @@
 	vision_range = 7
 	aggro_vision_range = 7
 
-	/*Код крашера с колониал маринов
-	Раскидывает мобов с дороги в стороны
+	/*ГЉГ®Г¤ ГЄГ°Г ГёГҐГ°Г  Г± ГЄГ®Г«Г®Г­ГЁГ Г« Г¬Г Г°ГЁГ­Г®Гў
+	ГђГ Г±ГЄГЁГ¤Г»ГўГ ГҐГІ Г¬Г®ГЎГ®Гў Г± Г¤Г®Г°Г®ГЈГЁ Гў Г±ГІГ®Г°Г®Г­Г»
 	for(var/o=0, o<10, o++)
 		target = get_turf(get_step(target,cur_dir))
 	L.throw_at(target, 200, 100)
@@ -292,7 +292,7 @@
 
 /mob/living/simple_animal/hostile/mutant/bloodsucker
 	name = "bloodsucker"
-	desc = "Твой худший ночной кошмар."
+	desc = "Г’ГўГ®Г© ГµГіГ¤ГёГЁГ© Г­Г®Г·Г­Г®Г© ГЄГ®ГёГ¬Г Г°."
 	eng_desc = "A rather disgusting-looking type of mutant with the same physical properties as a human besides the absence of genital organs,thus making the difference between male or female more difficult to do.Tentacles covered with blood seem to have replaced the lower part of the jaw, and sharp claws have replaced the end of the fingers.The guttural breathing of the mutant freezes your blood."
 	turns_per_move = 15
 	speed = 3
@@ -322,7 +322,7 @@
 	robust_searching = 1
 	deathmessage = "The bloodsucker makes a death scream!"
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/bloodsucker = 1, /obj/item/stalker/loot/bloodsucker = 1, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/bloodsucker = 1, /obj/item/stalker/loot/bloodsucker = 1)
 	//random_butcher_results = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	attack_type = "claw"
@@ -370,7 +370,7 @@
 
 /mob/living/simple_animal/hostile/mutant/pseudog
 	name = "psy-dog"
-	desc = "Лохматый пёс."
+	desc = "Г‹Г®ГµГ¬Г ГІГ»Г© ГЇВёГ±."
 	eng_desc = "Shaggy dog."
 	turns_per_move = 15
 	speed = 3
@@ -403,7 +403,7 @@
 	robust_searching = 1
 	deathmessage = "The pseudog makes a sinister howl!"
 	layer = MOB_LAYER - 0.1
-	butcher_results = list(/obj/item/stalker/loot/pseudo_tail = 1, /obj/item/reagent_containers/food/snacks/meat/slab = 3, /obj/nothing = 1)
+	butcher_results = list(/obj/item/stalker/loot/pseudo_tail = 1)
 	//random_butcher_results = 1
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	attack_type = "bite"
@@ -413,7 +413,7 @@
 
 /mob/living/simple_animal/hostile/mutant/controller
 	name = "Controller"
-	desc = "Полуголый старый мужчина с деформированной головой."
+	desc = "ГЏГ®Г«ГіГЈГ®Г«Г»Г© Г±ГІГ Г°Г»Г© Г¬ГіГ¦Г·ГЁГ­Г  Г± Г¤ГҐГґГ®Г°Г¬ГЁГ°Г®ГўГ Г­Г­Г®Г© ГЈГ®Г«Г®ГўГ®Г©."
 	eng_desc = "A rare type of mutant with the appearance of a deformed human with ridiculous physical properties.He has barely any clothes besides torn rags displayed randomly on the chest.Looking at him sends chills down your spine."
 	turns_per_move = 15
 	speed = 3
